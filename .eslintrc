@@ -1,0 +1,16 @@
+env:
+  node: true
+
+globals:
+  window: true
+
+rules:
+  camelcase: 0
+  no-debugger: 1
+  global-strict: [2, "always"]
+  no-underscore-dangle: 0
+  no-unused-vars: [2, {"vars": "local", "args": "none"}]
+  padded-blocks: [2, "never"]
+  quotes: [2, "single", "avoid-escape"]
+  space-after-keywords: [2, "always"]
+  space-before-blocks: [2, "always"]
