@@ -17,9 +17,5 @@ module.exports = function(config) {
     watch(config.get('paths.client.src.styles.glob'), function() {
       gulp.start('styles');
     });
-
-    watch(config.get('paths.client.build.glob'), function() {
-      gutil.log('TODO: reload browser');
-    });
   });
 };

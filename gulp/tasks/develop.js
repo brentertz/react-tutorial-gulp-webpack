@@ -2,19 +2,16 @@
 
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
+var runSequence = require('run-sequence');
 
 module.exports = function(config) {
-  gulp.task('develop', ['build', 'watch'], function() {
-    nodemon({
-      script: config.get('paths.server.src.scripts.main'),
-      ext: 'html js',
-      ignore: ['node_modules/**'],
-      watch: [
-        config.get('paths.config.root'),
-        config.get('paths.server.src.root')
-      ],
-      nodeArgs: ['--debug']
-    })
-    .on('change', ['lint']);
+  gulp.task('develop', function(callback) {
+    runSequence(
+      'build',
+      'nodemon',
+      'browser-sync',
+      'watch',
+      callback
+    );
   });
 };
