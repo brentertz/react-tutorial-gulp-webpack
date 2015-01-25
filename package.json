@@ -41,7 +41,6 @@
     "react": "^0.12.2",
     "react-tools": "^0.12.2",
     "run-sequence": "^1.0.2",
-    "webpack": "^1.5.3",
-    "webpack-dev-server": "^1.7.0"
+    "webpack": "^1.5.3"
   }
 }
